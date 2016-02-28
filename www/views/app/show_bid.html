@@ -3,8 +3,9 @@
     <span>Demande</span>
   </ion-nav-title>
   <ion-content>
-<input type="submit" value="Just Bidit !" ng-click="showBidding = ! showBidding" class="button button-block button-calm">
+<input type="button" value="Just Bidit !" ng-click="showBidding = ! showBidding" class="button button-block button-calm">
       </input>
+      <form ng-submit="createTask()" >
       <div  ng-show="showBidding">
         <label class="item item-input">
         <span class="input-label">Votre offre</span>
@@ -14,6 +15,12 @@
         <span class="input-label">Offre courrante</span>
         {{ bid.lastBid | currency:CAN: 2 }}
       </label>
+      <label class="item item-input">
+              <button typ="submit" ng-click="createTask" class="button button-block button-calm">
+        Bidit !
+      </button>
+      </label>
+</form>
         <div class="item item-divider"></div>
       </div>
     <label class="item item-input">

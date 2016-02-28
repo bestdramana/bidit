@@ -68,7 +68,7 @@ angular.module('your_app_name.controllers', [])
 
 
 //this method brings posts for a source provider
-.controller('ShowBidCtrl', function($scope, $stateParams, $http, FeedList, $q, $ionicLoading, BookMarkService) {
+.controller('ShowBidCtrl', function($scope, $stateParams, $http, $state, $q, $ionicLoading, BookMarkService) {
 	$scope.bid = [];
   $scope.showBidding = false;
 
@@ -102,6 +102,10 @@ angular.module('your_app_name.controllers', [])
 			$scope.bid.endDate = getDate($scope.bid.duration);
 			$scope.bid.currDate = new Date();
 	});
+
+     $scope.createTask = function createTask() {
+      $state.transitionTo("app.bid_list");
+  }
 })
 
 
@@ -310,7 +314,6 @@ angular.module('your_app_name.controllers', [])
             $scope.bids.push(response[i]);
           }
         }
-				console.log($scope.bids);
 		});
 })
 
