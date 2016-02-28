@@ -1,26 +1,15 @@
-[
-  {
-    "id":"1",
-    "title":"Pelleter mon entrer",
-    "description": "Bacon ipsum dolor amet shank beef tenderloin salami ground round. Beef boudin turkey, swine short ribs corned beef kevin short loin t-bone porchetta.",
-    "image":"http://www.linternaute.com/temoignage/image_temoignage/400/campagne-enneige-france-sous-neige-deposez-photos_551268.jpg",
+[{
+    "id": "1",
+    "title": "Promener mon chien",
+    "description": " Bonjour, je suis à la recherche de quelqu’un qui pourrait promener mon chien 3 fois cette semaine. Malheureusement, cette semaine je suis débordé et je n’aurai pas le temps.  J’aimerais avoir quelqu’un qui est habitué avec les chiens. Ne vous inquiétez pas, Lola est un labrador blond très affectueuse. J’aimerais que cela soit durant l’après-midi. Merci à tous!",
+    "image": "https://www.colourbox.com/preview/3319750-labrador-retriever-blond.jpg",
     "duration": "168",
-    "location": "Trois-rivieres"
-  },
-  {
-    "id":"2",
-    "title":"Promener mon chat ti-mine",
-    "description": " Pastrami flank drumstick, venison filet mignon corned beef biltong chuck frankfurter cow hamburger beef ribs boudin jowl jerky.",
-    "image":"img/feeds/news.jpg",
-    "duration": "1",
-    "location": "Trois-rivieres"
-  },
-  {
-    "id":"3",
-    "title":"Changement d'huile sur mon auto",
-    "description": "Picanha drumstick sirloin, tail doner porchetta turkey pancetta.",
-    "image":"img/feeds/news.jpg",
-    "duration": "24",
-    "location": "Trois-rivieres"
-  }
-]
+    "location": "Trois-Rivières"
+}, {
+    "id": "2",
+    "title": "Tondre mon gazon",
+    "description": "Bonjour, j'aimerais avoir vos propositions pour tondre mon gazon qui est d'une grandeur de 25pi. par 15pi. J'aimerais qu'il soit tondue en après-midi. Matériel requis. ",
+    "image": "http://www.nouveaux-paysagistes.fr/wp-content/uploads/2012/07/Amenagement-exterieur-entree-holtzheim-2-paysagiste-alsace-strasbourg-1.jpg",
+    "duration": "168",
+    "location": "Trois-Rivières"
+}]

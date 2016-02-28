@@ -17,7 +17,7 @@ angular.module('your_app_name.controllers', [])
 	});
 })
 
-.controller('BidCtrl', function($scope, $ionicConfig) {
+.controller('BidCtrl', function($scope, $ionicConfig, $state) {
 		var today = new Date();
     var dd = today.getDate();
     var mm = today.getMonth()+1; //January is 0!
@@ -52,8 +52,8 @@ angular.module('your_app_name.controllers', [])
 			$scope.futureDate = today;
   	}
   }
-  $scope.createTask = function createTask(task) {
-  		alert(task)
+  $scope.createTask = function createTask() {
+  		$state.transitionTo("app.bid_list");
   }
 })
 
