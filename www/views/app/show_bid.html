@@ -1,0 +1,42 @@
+<ion-view class="feed-entries-view">
+  <ion-nav-title>
+    <span>Demande</span>
+  </ion-nav-title>
+  <ion-content>
+
+    <label class="item item-input">
+        <span class="input-label">Titre du service</span>
+        <p>
+          {{ bid.title }}
+        </p>
+      </label>
+      <label class="item item-textarea">
+        <span class="input-label">Description de la demande</span>
+        <p>
+          {{ bid.description }}
+        </p>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Emplacement</span>
+        <p>
+          {{ bid.description }}
+        </p>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Date d'échéance</span>
+        <p>
+          {{ bid.currDate | date:'yyyy-MM-dd'}}
+        </p>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Date d'execution</span>
+        <p>
+          {{ bid.endDate }}
+        </p>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Image des lieux</span>
+        <img ng-src="{{ bid.image }}" alt="Description" />
+      </label>
+  </ion-content>
+</ion-view>

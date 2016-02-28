@@ -1,0 +1,14 @@
+{
+  "name": "bid-it",
+  "app_id": "ecf6083b",
+  "gulpStartupTasks": [
+    "sass",
+    "templatecache",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ],
+  "documentRoot": "www"
+}

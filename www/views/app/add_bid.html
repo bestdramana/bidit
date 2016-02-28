@@ -1,0 +1,87 @@
+<form ng-submit="createTask(task)" >
+<ion-view cache-view="false"  class="forms-view">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-nav-title>
+    <span>Demande de service</span>
+  </ion-nav-title>
+  <ion-content>
+    <ul class="list">
+
+      <div class="item item-divider">Information sur le service</div>
+
+      <label class="item item-input">
+        <span class="input-label">Titre du service</span>
+        <input type="text" placeholder="Titre du service">
+      </label>
+      <label class="item item-textarea">
+        <span class="input-label">Description de la demande</span>
+        <textarea rows="10" cols="121"></textarea>
+      </label>
+       <label class="item item-input item-select item-stable">
+      <div class="input-label" >
+          Select
+      </div>
+      <select style="width:100%">>
+          <option>Option 1</option>
+          <option selected>Option 2</option>
+          <option>Option 3</option>
+      </select>
+  </label>
+      <label class="item item-input">
+        <span class="input-label">Emplacement</span>
+        <input type="text" placeholder="Emplacement">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">échéance</span>
+        <div class="list">
+         <label class="item item-radio">
+            <input type="radio" name="due-date" ng-click="showFuture(1)">
+            <div class="item-content">
+               1 Heure
+            </div>
+            <i class="radio-icon ion-checkmark"></i>
+         </label>
+
+         <label class="item item-radio">
+            <input type="radio" name="due-date" ng-click="showFuture(24)">
+            <div class="item-content">
+               24 Heures
+            </div>
+            <i class="radio-icon ion-checkmark"></i>
+         </label>
+
+         <label class="item item-radio">
+            <input type="radio" name="due-date" ng-click="showFuture(168)">
+            <div class="item-content">
+               7 Jours
+            </div>
+            <i class="radio-icon ion-checkmark"></i>
+         </label>
+
+         <label class="item item-radio">
+            <input type="radio" name="due-date" ng-click="showFuture(0)">
+            <div class="item-content">
+              Ouvert
+            </div>
+            <i class="radio-icon ion-checkmark"></i>
+         </label>
+      </div>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Date d'exécution</span>
+        <label>{{ futureDate }}</label>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Image des lieux</span>
+        <input type="file" name="pic" accept="image/*">
+      </label>
+     <input type="submit" value="Bidit !" class="button button-block button-calm">
+
+      </input>
+      </div>
+    </ul>
+  </ion-content>
+</ion-view>
+</form>
