@@ -5,8 +5,11 @@ angular.module('your_app_name.controllers', [])
 })
 
 // APP
-.controller('AppCtrl', function($scope, $ionicConfig) {
-
+.controller('AppCtrl', function($scope, $http, $ionicConfig) {
+  $scope.bidCount = 0;
+  $http.get('feeds-bids.json').success(function(response) {
+    $scope.bidCount = response.length;
+  });
 })
 
 .controller('BidListCtrl', function($scope, $http) {
@@ -17,7 +20,7 @@ angular.module('your_app_name.controllers', [])
 	});
 })
 
-.controller('BidCtrl', function($scope, $ionicConfig, $state) {
+.controller('BidCtrl', function($scope, $ionicConfig, $state, $http) {
 		var today = new Date();
     var dd = today.getDate();
     var mm = today.getMonth()+1; //January is 0!
@@ -52,6 +55,12 @@ angular.module('your_app_name.controllers', [])
 			$scope.futureDate = today;
   	}
   }
+  $scope.categories = [];
+
+  $http.get('feeds-categories.json').success(function(response) {
+			$scope.categories = response;
+	});
+
   $scope.createTask = function createTask() {
   		$state.transitionTo("app.bid_list");
   }
@@ -61,9 +70,14 @@ angular.module('your_app_name.controllers', [])
 //this method brings posts for a source provider
 .controller('ShowBidCtrl', function($scope, $stateParams, $http, FeedList, $q, $ionicLoading, BookMarkService) {
 	$scope.bid = [];
+  $scope.showBidding = false;
 
 	var bidId = $stateParams.bidId,
 			sourceId = $stateParams.sourceId;
+
+  var showBiddingDiv = function() {
+    $scope.showBidding = true;
+  };
 
 	var getDate = function (duration) {
 					var now = new Date();
@@ -278,24 +292,26 @@ angular.module('your_app_name.controllers', [])
 // FEED
 //brings all feed categories
 .controller('FeedsCategoriesCtrl', function($scope, $http) {
-	$scope.feeds_categories = [];
+	$scope.categories = [];
 
-	$http.get('feeds-categories.json').success(function(response) {
-		$scope.feeds_categories = response;
+	$http.get('feeds-menu-cats.json').success(function(response) {
+		$scope.categories = response;
 	});
 })
 
 //bring specific category providers
 .controller('CategoryFeedsCtrl', function($scope, $http, $stateParams) {
-	$scope.category_sources = [];
+	$scope.bids = [];
 
 	$scope.categoryId = $stateParams.categoryId;
-
-	$http.get('feeds-categories.json').success(function(response) {
-		var category = _.find(response, {id: $scope.categoryId});
-		$scope.categoryTitle = category.title;
-		$scope.category_sources = category.feed_sources;
-	});
+	$http.get('feeds-bids.json').success(function(response) {
+        for (var i = response.length - 1; i >= 0; i--) {
+          if (response[i].category == $scope.categoryId) {
+            $scope.bids.push(response[i]);
+          }
+        }
+				console.log($scope.bids);
+		});
 })
 
 //this method brings posts for a source provider

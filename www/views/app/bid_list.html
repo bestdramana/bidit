@@ -6,7 +6,8 @@
     <div class="list category-feeds">
       <a ng-repeat="source in bids" class="item item-icon-right" ui-sref="app.show_bid({bidId: source.id, sourceId: (source.title | slugify)})">
         <div>
-          <span class="title">{{source.title}}</span>
+          <span class="title">{{source.title}} |</span>
+          <span class="calm">Offre courrante {{ source.lastBid | currency:CAN: 2 }}</span>
           <p class="description">{{source.description}}</p>
         </div>
         <i class="icon ion-arrow-right-c"></i>

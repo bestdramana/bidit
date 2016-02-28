@@ -3,7 +3,19 @@
     <span>Demande</span>
   </ion-nav-title>
   <ion-content>
-
+<input type="submit" value="Just Bidit !" ng-click="showBidding = ! showBidding" class="button button-block button-calm">
+      </input>
+      <div  ng-show="showBidding">
+        <label class="item item-input">
+        <span class="input-label">Votre offre</span>
+        <input type="text" placeholder="$13.00">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Offre courrante</span>
+        {{ bid.lastBid | currency:CAN: 2 }}
+      </label>
+        <div class="item item-divider"></div>
+      </div>
     <label class="item item-input">
         <span class="input-label">Titre du service</span>
         <p>

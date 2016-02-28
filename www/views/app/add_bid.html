@@ -23,10 +23,8 @@
       <div class="input-label" >
           Select
       </div>
-      <select style="width:100%">>
-          <option>Option 1</option>
-          <option selected>Option 2</option>
-          <option>Option 3</option>
+      <select style="width:100%">
+      <option ng-repeat="option in categories" value="{{option}}">{{option}}</option>
       </select>
   </label>
       <label class="item item-input">

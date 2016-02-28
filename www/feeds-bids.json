@@ -4,12 +4,26 @@
     "description": " Bonjour, je suis à la recherche de quelqu’un qui pourrait promener mon chien 3 fois cette semaine. Malheureusement, cette semaine je suis débordé et je n’aurai pas le temps.  J’aimerais avoir quelqu’un qui est habitué avec les chiens. Ne vous inquiétez pas, Lola est un labrador blond très affectueuse. J’aimerais que cela soit durant l’après-midi. Merci à tous!",
     "image": "https://www.colourbox.com/preview/3319750-labrador-retriever-blond.jpg",
     "duration": "168",
-    "location": "Trois-Rivières"
+    "category": "vie-familiale",
+    "location": "Trois-Rivières",
+    "lastBid": "21"
 }, {
     "id": "2",
     "title": "Tondre mon gazon",
     "description": "Bonjour, j'aimerais avoir vos propositions pour tondre mon gazon qui est d'une grandeur de 25pi. par 15pi. J'aimerais qu'il soit tondue en après-midi. Matériel requis. ",
     "image": "http://www.nouveaux-paysagistes.fr/wp-content/uploads/2012/07/Amenagement-exterieur-entree-holtzheim-2-paysagiste-alsace-strasbourg-1.jpg",
     "duration": "168",
-    "location": "Trois-Rivières"
+    "category": "service-dentretien",
+    "location": "Trois-Rivières",
+    "lastBid": "89"
+},
+ {
+    "id": "3",
+    "title": "Tondre mon gazon",
+    "description": "Bonjour, j'aimerais avoir vos propositions pour tondre mon gazon qui est d'une grandeur de 25pi. par 15pi. J'aimerais qu'il soit tondue en après-midi. Matériel requis. ",
+    "image": "http://www.nouveaux-paysagistes.fr/wp-content/uploads/2012/07/Amenagement-exterieur-entree-holtzheim-2-paysagiste-alsace-strasbourg-1.jpg",
+    "duration": "168",
+    "category": "service-dentretien",
+    "location": "Trois-Rivières",
+    "lastBid": ""
 }]

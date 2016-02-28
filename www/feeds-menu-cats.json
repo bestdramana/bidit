@@ -1,0 +1,25 @@
+[{
+  "id": "Ménage",
+  "image": "/img/Cleaninglogo.jpg"
+}, {
+  "id": "Vie familiale",
+  "image": "/img/Family_Corona.jpg"
+}, {
+  "id": "Réparation",
+  "image": "/img/reparation_Logo.jpg"
+}, {
+  "id": "Service et Conseil",
+  "image": "/img/service.jpg"
+}, {
+  "id": "Transport",
+  "image": "/img/transport_Livraison.jpg"
+}, {
+  "id": "Service d'entretien",
+  "image": "/img/houseJob.jpg"
+}, {
+  "id": "Certifié",
+  "image": "/img/Logo_Certification.jpg"
+}, {
+  "id": "Support évènementiel",
+  "image": "/img/Photograph.jpg"
+}]
